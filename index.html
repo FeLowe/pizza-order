@@ -5,36 +5,53 @@
     <link href="css/styles.css" rel="stylesheet" type='text/css' charset="utf-8">
     <script src= "js/jquery-1.12.2.js"></script>
     <script src= "js/scripts.js"></script>
-    <title>Dej&aacute;Vu Pizzas</title>
+    <title>D&eacute;j&aacute;Vu Pizzas</title>
   </head>
   <body>
     <div class="jumbotron text-center">
-      <h1>Dej&aacute;Vu Pizzas</h1>
-      <h3>If you feel like you have ordered with us before, you probabily have! But if you haven't yet, then do it, we guarantee you won't regret.</h3>
+      <h1><em>D&eacute;j&aacute;Vu Pizzas</em></h1>
+      <p>If you feel like you have ordered with us before, you probabily have. <em>D&eacute;j&aacuteVu!</em>
+        But if you haven't yet, then do it, we guarantee you won't regret.</p>
     </div>
-
+    <div class="jumbotron">
+      <h2><strong>Our Pizzas</strong></h2>
+      <p><em>D&eacute;j&aacute;Vu Pizzas</em> are made with our home made unbleached flour dough, our home made fresh tomato sauce and a choice of you favorite topping. And to top it off, backed to perfection in a wood fire oven</p>
+      <p><strong>Pizza Price:</strong> All of our pizzas have a fixed price of: Small ($15), Medium($20) and Large($25), + any extra toppings you may want to add. Extras toppings cost only $2 each.</p>
+    </div>
     <div class="container">
-
       <form id="pizza">
-        <h3>Let's start by choosing the size of your pizza</h3>
-
-        <div id="pizza-size" class="form-group">
-          <input type="radio" name="pizza-size" id="sm" value="small">Small (14")
-          <input type="radio" name="pizza-size" id="md" value="medium">Medium (16")
-          <input type="radio" name="pizza-size" id="lg" value="large">Large (18")
+        <h1>Let's get started!</h1>
+        <div class="jumbotron">
+          <h3>Choose your pizza size</h3>
+          <div id="pizza-size" class="form-group" required>
+            <input type="radio" name="pizza-size" id="small" value="small">Small (14")
+            <input type="radio" name="pizza-size" id="medium" value="medium">Medium (16")
+            <input type="radio" name="pizza-size" id="large" value="large">Large (18")
         </div>
+        </div><!-- jumbotron closing div-->
 
-        <div id="toppings" class="form-group">
+        <div class="jumbotron">
+        <h3>Choose your pizza dough</h3>
+        <div id="pizza-dough" class="form-group" required>
+          <input type="radio" name="pizza-dough" id="regular-flour" value="regular-flour">Unbleached Flour
+          <input type="radio" name="pizza-dough" id="whole-wheat" value="pizza-dough">Whole Wheat Flour
+        </div>
+      </div> <!-- jumbotron closing div-->
+
+      <div class="jumbotron">
+        <div id="pizza-flavor" class="form-group">
           <h3>Toppings</h3>
-          <input type="radio" name="toppings" class="toppings" value="sausage">Sausage
-          <input type="radio" name="toppings" class="toppings" value="pepperoni">Pepperoni
-          <input type="radio" name="toppings" class="toppings" value="bacon">Bacon
-          <input type="radio" name="toppings" class="toppings" value="chicken">Chicken
-          <input type="radio" name="toppings" class="toppings" value="veggies">Veggies
+          <input type="radio" name="pizza-flavor" class="pizza-flavor" value="sausage">Sausage
+          <input type="radio" name="pizza-flavor" class="pizza-flavor" value="pepperoni">Pepperoni
+          <input type="radio" name="pizza-flavor" class="pizza-flavor" value="bacon">Bacon
+          <input type="radio" name="pizza-flavor" class="pizza-flavor" value="chicken">Chicken
+          <input type="radio" name="pizza-flavor" class="pizza-flavor" value="veggies">Veggies
         </div>
+      </div> <!-- jumbotron closing div-->
 
+        <div class="jumbotron">
         <div id= "extraToppings" class="form-group">
-          <h3>Extra toppings for only $1 each</h3>
+          <h3>Extra toppings ($2 each)</h3>
           <input type="radio" name="extraToppings" class="extraToppings" value="tomato">Tomato
           <input type="radio" name="extraToppings" class="extraToppings" value="garlic">Fresh Garlic
           <input type="radio" name="extraToppings" class="extraToppings" value="artichoke"> Artichoke
@@ -47,46 +64,49 @@
           <input type="radio" name="extraToppings" class="extraToppings" value="bacon">Bacon
           <input type="radio" name="extraToppings" class="extraToppings" value="chicken">Chicken
         </div>
+        </div> <!-- jumbotron closing div-->
 
-        <div class="form-group">
+         <div class="jumbotron">
+           <div class="form-group">
           <h3>Quantity</h3>
-          <select id="quantity" value="quantity" class="form-control" required>
+          <select id="pizza-quantity" value="pizza-quantity" class="form-control" required>
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
             <option value="4">4</option>
             <option value="5andOver">5 and over - Please call the store</option>
           </select>
-        </div>
+          </div>
+        </div> <!-- jumbotron closing div-->
 
-        <button type="button" id= "myBtn" class="btn">Add another pizza</button>
-        <button type="button" id= "myBtn" class="btn">Place order</button>
+        <div class="jumbotron">
+          <button type="submit" id= "anotherPizza" class="btn">Add another pizza</button>
+          <button type="submit" id= "placeOrder" class="btn">Place order</button>
+        </div><!-- jumbotron closing div-->
 
+      </form>
+      <div class="jumbotron">
+        <div class="orderSummary">
+        <h3>Order summary</h3>
+
+        <h5>Pizza flavor:</h5>
+        <p><span class="pizza-toppings"></span></p>
+
+        <h5>Pizza size:</h5>
+        <p class="pizza-size"></p>
+
+        <h5>Extra toppings:</h5>
+        <p class="pizza-extra-toppings"></p>
+
+        <h5>Quantity:</h5>
+        <p class="pizza-quantity"></p>
+
+        <h5><strong>Total Price:</strong></h5>
+        <p class="pizza-price"></p>
       </div>
+    </div> <!-- jumbotron closing div-->
 
-    </form>
-
-    <div class="orderSummary" class="jumbotron">
-      <h3>Order summary</h3>
-
-      <h4>Pizza size:</h4>
-      <p><span class="pizza-size"></span></p>
-
-      <h4>Toppings:</h4>
-      <p><span class="pizza-toppings"></span></p>
-
-      <h4>add on toppings:</h4>
-      <p><span class="pizza-extra-toppings"></span></p>
-
-      <h4>Quantity:</h4>
-      <p><span class="pizza-quantity"></span></p>
-
-      <h4>Total Price:</h4>
-      <p><span class="pizza-price"></span></p>
-    </div>
-  </div>
-
-  <button type="button" class="" >Confirm order</button>
-  </div>
+    <button type="submit" class="" >Confirm order</button>
+    </div><!--container closing tag-->
   </body>
 </html>
