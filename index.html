@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="css/bootstrap.css" rel="stylesheet" type='text/css' charset="utf-8">
+    <link href="css/styles.css" rel="stylesheet" type='text/css' charset="utf-8">
+    <script src= "js/jquery-1.12.2.js"></script>
+    <script src= "js/scripts.js"></script>
+    <title>Dej&aacute;Vu Pizzas</title>
+  </head>
+  <body>
+    <div class="jumbotron text-center">
+      <h1>Dej&aacute;Vu Pizzas</h1>
+      <h3>If you feel like you have ordered with us before, you probabily have! But if you haven't yet, then do it, we guarantee you won't regret.</h3>
+    </div>
+
+    <div class="container">
+
+      <form id="pizzas">
+        <h3>Let's start by choosing the size of your pizza</h3>
+
+        <div id="pizza-size" class="form-group">
+          <input type="radio" name="pizza-size" id="sm" value="small">Small (14")
+          <input type="radio" name="pizza-size" id="md" value="medium">Medium (16")
+          <input type="radio" name="pizza-size" id="lg" value="large">Large (18")
+        </div>
+
+        <div id="meat" class="form-group">
+          <h3>Toppings</h3>
+          <input type="radio" name="toppings" class="toppings" value="sausage">Sausage
+          <input type="radio" name="toppings" class="toppings" value="pepperoni">Pepperoni
+          <input type="radio" name="toppings" class="toppings" value="bacon">Bacon
+          <input type="radio" name="toppings" class="toppings" value="chicken">Chicken
+          <input type="radio" name="toppings" class="toppings" value="veggies">Veggies
+        </div>
+
+        <div id= "adOnToppings" class="form-group">
+          <h3>Extra toppings for only $1 each</h3>
+          <input type="radio" name="toppings" class="toppings" value="tomato">Tomato
+          <input type="radio" name="toppings" class="toppings" value="garlic">Fresh Garlic
+          <input type="radio" name="toppings" class="toppings" value="artichoke"> Artichoke
+          <input type="radio" name="toppings" class="toppings" value="mushrooms"> Mushrooms
+          <input type="radio" name="toppings" class="toppings" value="onion">Onion<br>
+          <input type="radio" name="toppings" class="toppings" value="peppers">Green Peppers
+          <input type="radio" name="toppings" class="toppings" value="sausage">Sausage
+          <input type="radio" name="toppings" class="toppings" value="pepperoni">Pepperoni
+          <input type="radio" name="toppings" class="toppings" value="bacon">Bacon
+          <input type="radio" name="toppings" class="toppings" value="chicken">Chicken
+        </div>
+
+        <div class="form-group">
+          <h3>Quantity</h3>
+          <select id="quantity" value="quantity" class="form-control" required>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5andOver">5 and over - Please call the store</option>
+          </select>
+        </div>
+
+        <button type="button" id= "myBtn" class="btn">Add another pizza</button>
+        <button type="button" id= "myBtn" class="btn">Place order</button>
+
+      </div>
+
+    </form>
+
+    <div class="orderSummary" class="jumbotron">
+      <h3>Order summary</h3>
+
+      <h4>Pizza size:</h4>
+      <p><span class="pizza-size"></span></p>
+
+      <h4>Toppings:</h4>
+      <p><span class="pizza-toppings"></span></p>
+
+      <h4>add on toppings:</h4>
+      <p><span class="pizza-extra-toppings"></span></p>
+
+      <h4>Quantity:</h4>
+      <p><span class="pizza-quantity"></span></p>
+
+      <h4>Total Price:</h4>
+      <p><span class="pizza-price"></span></p>
+    </div>
+  </div>
+
+  <button type="button" class="" >Confirm order</button>
+  </div>
+  </body>
+</html>
