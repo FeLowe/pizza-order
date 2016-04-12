@@ -14,6 +14,7 @@ Pizza.prototype.sizePrice = function() {
   } else if (this.size === "medium") {
     this.pizzaPrice = 20;
   } else {
+
     this.pizzaPrice = 25; /*large pizza price*/
   }
 }
@@ -21,6 +22,7 @@ Pizza.prototype.sizePrice = function() {
 Pizza.prototype.toppingsPrice = function(){
   this.toppingPrice = (this.toppings * 2);
 }
+
 
 //USER INTERFACE LOGIC
 $(document).ready(function() {
